@@ -3,10 +3,11 @@ Documentation     This suite file verifes all test case related
 ...   the valid credentials
 
 Library  SeleniumLibrary
+Resource  ../base/common_functionality.resource
 
 *** Test Cases ***
 Verify Valid Credential Test
-
+     Launch Browser
      Open Browser     browser=chrome    executable_path=${EXECDIR}${/}drivers${/}chromedriver.exe
      Maximize Browser Window
       Set Selenium Implicit Wait    30s
