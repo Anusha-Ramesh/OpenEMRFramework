@@ -16,8 +16,6 @@ TC3     Mark    Mark123     Greek   Invalid username or password
 TC4     ${EMPTY}    peter123         Dutch       Invalid username or password
 
 
-
-
 *** Keywords ***
 Verify Invalid Credential Template
     [Arguments]     ${username}     ${password}     ${language}     ${expected_error}
