@@ -5,7 +5,7 @@ Documentation     This suite file verifes all test case related
 Library  SeleniumLibrary
 Resource  ../base/common_functionality.resource
 
-Library    DataDriver   file=../test_data/OpenEMRdata.xlsx     sheet_name=VerifyValidCredentialTemplate
+Library    DataDriver   file=../test_data/verify_validate_credential.csv
 
 Test Setup  Launch Browser
 Test Teardown  End Browser
