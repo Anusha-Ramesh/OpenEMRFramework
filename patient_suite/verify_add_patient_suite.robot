@@ -31,7 +31,6 @@ Test Template   Patient Verify Credential Template
 *** Test Cases ***
 TC1     admin    pass   English (Indian)    OpenEMR     Harsha  Chopda    1995-10-10   Female
 
-
 *** Keywords ***
 Patient Verify Credential Template
            [Arguments]          ${username}      ${password}       ${language}       ${expected_title}    ${fname}   ${lname}   ${dob}  ${fs}
