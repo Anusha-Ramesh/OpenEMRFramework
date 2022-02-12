@@ -1,7 +1,8 @@
-    *** Settings ***
+*** Settings ***
 Documentation   This file contains reusable keywords
 
 Library     SeleniumLibrary
+Library    OperatingSystem
 
 *** Variables ***
 ${BROWSER_NAME}         edge
