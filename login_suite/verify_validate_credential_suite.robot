@@ -5,15 +5,15 @@ Documentation     This suite file verifes all test case related
 Library  SeleniumLibrary
 Resource  ../base/common_functionality.resource
 
+Library    DataDriver   file=../test_data/OpenEMRdata.xlsx     sheet_name=VerifyValidCredentialTemplate
+
 Test Setup  Launch Browser
 Test Teardown  End Browser
 
 Test Template  Verify Valid Credential Template
 
 *** Test Cases ***
-TC1     admin    pass    English (Indian)     OpenEMR
-TC2     physician    physician    English (Indian)    OpenEMR
-
+TC1
 
 *** Keywords ***
 Verify Valid Credential Template
