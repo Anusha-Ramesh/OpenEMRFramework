@@ -18,10 +18,12 @@ Update the Sex
 
 *** Settings ***
 Documentation   this file contains adding new patients and verifing it
+...    This file handles all the test case related to patients
 
 Library   SeleniumLibrary
 
 Resource    ../base/common_functionality.resource
+Resource    ../pages/login_page.resource
 Test Setup   Launch Browser
 Test Teardown  End Browser
 
@@ -52,4 +54,22 @@ Patient Verify Credential Template
       Mouse Down    xpath=//input[@type='button']
       ${alert_text}  Handle Alert  action=Accept  timeout=20s
        Log To Console  ${alert_text}
+
+Verify Add Patient Test
+    Enter Username      admin
+    Enter Password      pass
+    Select Language Using Lable    English (Indian)
+    Click Login
+    Click Element    xpath=//div[text()='Patient/Client']
+    Click Element    xpath=//div[text()='Patients']
+    Select Frame    xpath=//iframe[@name='fin']
+    Click Element    id=create_patient_btn1
+    Unselect Frame
+    Select Frame    xpath=//iframe[@name='pat']
+    Input Text    css=#form_fname      balaji
+    Input Text    id=form_DOB    2022-02-12
+    Comment     Complete remaining steps using below comment
+    Unselect Frame
+
+    Run Keyword And Ignore Error    Click Element    xpath=//div[@class='closeDlgIframe']
 
